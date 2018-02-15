@@ -18,7 +18,7 @@ function addDropdown() {
   
   // put list of sample names into an array
   sampleNames = [];
-  // queryURL = 'https://bellybuttonbiodiversity.herokuapp.com/names';
+  // queryURL = 'https://herokuapp.com/names';
   queryURL = 'http://localhost:5000/names';
   // Take response and assign to sampleNames array
   d3.json(queryURL, function (error, response) {
@@ -118,7 +118,7 @@ function updatePlots(newdata) {
   otuDescAll  = [];
 
   // Get the otu_id 
-  // queryURL = 'https://bellybuttonbiodiversity.herokuapp.com/otu';
+  // queryURL = 'https://herokuapp.com/otu';
   queryURL = 'http://localhost:5000/otu';
 
   d3.json(queryURL, function (error, response) {
@@ -253,7 +253,7 @@ function optionChanged(selectedOption) {
     console.log("inside optionChanged()");
 
     // Get metadata information for the specific sample from the metadata url/endpoint
-    // queryURL1 = 'https://bellybuttonbiodiversity.herokuapp.com/metadata/' + selectedOption;
+    // queryURL1 = 'https://herokuapp.com/metadata/' + selectedOption;
     queryURL1 = 'http://localhost:5000/metadata/' + selectedOption;
     metaDataInfo = "";
   
@@ -280,7 +280,7 @@ function optionChanged(selectedOption) {
 
   // Get list of otu_id's and sample_count  
   
-  // queryURL2 = 'https://bellybuttonbiodiversity.herokuapp.com/samples/' + selectedOption;
+  // queryURL2 = 'https://herokuapp.com/samples/' + selectedOption;
   queryURL2 = 'http://localhost:5000/samples/' + selectedOption;
   otuIdAndSampleCount = [];
 
@@ -298,7 +298,7 @@ function optionChanged(selectedOption) {
 
 
   // Get washing frequency for the sample
-  // queryURL3 = 'https://bellybuttonbiodiversity.herokuapp.com/wfreq/' + selectedOption;
+  // queryURL3 = 'https://herokuapp.com/wfreq/' + selectedOption;
   queryURL3 = 'http://localhost:5000/wfreq/' + selectedOption;
   washFreq = "";
 
